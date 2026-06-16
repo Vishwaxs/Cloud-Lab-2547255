@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root {
+  --abhm-saffron: #ff9933;
+  --abhm-orange: #ff8c00;
+  --abhm-light-orange: #ffb366;
+  --abhm-deep-red: #8b0000;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(255, 255, 255, 0.12), transparent 55%),
+    radial-gradient(900px 500px at 80% 10%, rgba(255, 255, 255, 0.08), transparent 60%),
+    linear-gradient(135deg, #ff9933 0%, #ff8c00 50%, #ff9933 100%);
+  background-attachment: fixed;
+  color: white;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto,
+    Arial, "Noto Sans", sans-serif;
+  min-height: 100vh;
+}
+
+/* Smooth transitions for interactive elements only */
+button, a, input, textarea, select, [role="button"] {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, 
+              transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible, a:focus-visible, [role="button"]:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+@layer base {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),
+  textarea,
+  select {
+    @apply bg-white text-black placeholder:text-gray-500 border border-black/20 rounded-lg px-3 py-2 text-sm;
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-400/70 focus:border-orange-500;
+  }
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.abhm-marquee {
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  animation: abhm-marquee 18s linear infinite;
+  will-change: transform;
+}
+
+@keyframes abhm-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .abhm-marquee {
+    animation: none;
+    width: 100%;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Fade-in animation for page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Skeleton loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Slide animations */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-top {
+  animation: slideInFromTop 0.3s ease-out;
+}

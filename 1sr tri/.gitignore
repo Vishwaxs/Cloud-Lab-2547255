@@ -1,0 +1,12 @@
+/.vscode
+/c_prjct
+/equilisync_react
+/equilisync_react.zip
+/equilisync_react_experimental
+/nodedemos
+/not-needed
+/package-lock.json
+FSD/unit-1/EQUILISYNC
+
+# Local Netlify folder
+.netlify
