@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — NexaCloud Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-icon">⬡</span><span class="logo-text">NexaCloud</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn-nav">Get Started →</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content reveal">
+        <p class="section-tag">Get in Touch</p>
+        <h1>Start Your <span class="gradient-text">Cloud Journey</span></h1>
+        <p>Book a free 30-minute architecture assessment with our team</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="contact-form-wrap reveal">
+          <h2>Send us a Message</h2>
+          <p class="form-note">We'll respond within 24 hours on business days.</p>
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" placeholder="Arjun Sharma" required />
+              </div>
+              <div class="form-group">
+                <label>Business Email *</label>
+                <input type="email" placeholder="arjun@company.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Company Name</label>
+              <input type="text" placeholder="Acme Technologies Pvt. Ltd." />
+            </div>
+            <div class="form-group">
+              <label>Services Interested In</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" /> Cloud Migration</label>
+                <label class="checkbox-label"><input type="checkbox" /> DevOps &amp; CI/CD</label>
+                <label class="checkbox-label"><input type="checkbox" /> Security &amp; Compliance</label>
+                <label class="checkbox-label"><input type="checkbox" checked /> Cost Optimization</label>
+                <label class="checkbox-label"><input type="checkbox" /> Kubernetes</label>
+                <label class="checkbox-label"><input type="checkbox" /> 24/7 Monitoring</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Project Description</label>
+              <textarea rows="5" placeholder="Tell us about your current infrastructure and what you're trying to achieve..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">Send Message →</button>
+          </form>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="contact-info reveal">
+          <h2>Contact Information</h2>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="cc-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p>hello@nexacloud.io</p>
+                <p>support@nexacloud.io</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="cc-icon">📍</div>
+              <div>
+                <h4>Office</h4>
+                <p>NexaCloud Solutions Pvt. Ltd.</p>
+                <p>Koramangala, Bengaluru — 560034</p>
+                <p>Karnataka, India</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="cc-icon">📞</div>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 98765 43210</p>
+                <p>Mon–Fri, 9am–7pm IST</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="cc-icon">⏱️</div>
+              <div>
+                <h4>Response Time</h4>
+                <p>Email: &lt; 24 hours</p>
+                <p>Emergency: &lt; 2 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">⬡</span><span class="logo-text">NexaCloud</span></a><p>Enterprise cloud infrastructure for the modern era.</p></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Migration</a></li><li><a href="services.html">DevOps</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li>hello@nexacloud.io</li><li>Bengaluru, Karnataka</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 NexaCloud Solutions Pvt. Ltd.</span><span class="footer-hosted">☁️ Hosted on <strong>Amazon EC2</strong> — Auto-deployed via User Data</span></div>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

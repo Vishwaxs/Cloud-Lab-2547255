@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Access Denied — NexaCloud Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-icon">⬡</span><span class="logo-text">NexaCloud</span></a>
+    </div>
+  </nav>
+
+  <section class="error-page">
+    <div class="error-bg">
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+    </div>
+    <div class="container">
+      <div class="error-content">
+        <div class="error-code gradient-text">403</div>
+        <h1>Access Denied</h1>
+        <p class="error-msg">You don't have permission to access this resource. This page may be restricted by Amazon S3 bucket permissions.</p>
+        <div class="error-details">
+          <p>This error occurs when:</p>
+          <ul>
+            <li>Block All Public Access is enabled on the S3 bucket</li>
+            <li>No bucket policy grants <code>s3:GetObject</code> permission</li>
+            <li>The object-level ACL is set to <code>private</code></li>
+            <li>Your pre-signed URL has expired</li>
+          </ul>
+        </div>
+        <a href="index.html" class="btn-primary">← Return to Home</a>
+        <p class="error-hosted">This error page is served by <strong>Amazon S3</strong> as the configured <code>ErrorDocument</code></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
