@@ -1,0 +1,50 @@
+======================================================================
+               AWS RESOURCE INVENTORY REPORT
+======================================================================
+Generated : 2026-07-01 05:32:32 UTC
+Account   : 555693168652
+Region    : us-east-1
+
+======================================================================
+[ 1. S3 BUCKET INVENTORY ]
+======================================================================
+Bucket Name : 2547255-bucket
+Folders     : efolder/, ufolder/
+
+Objects:
+  Object Key                         Size(bytes)  StorageClass  LastModified
+  ----------------------------------------------  -------------------------------------
+  efolder/                                     0  STANDARD      2026-07-01 05:18:29 UTC
+  efolder/employeefile.xlsx                 5194  STANDARD      2026-07-01 05:30:57 UTC
+  ufolder/                                     0  STANDARD      2026-07-01 05:18:28 UTC
+  ufolder/userfile.xlsx                     5184  STANDARD      2026-07-01 05:30:56 UTC
+
+Total objects : 4
+Total size    : 10378 bytes
+
+======================================================================
+[ 2. RUNNING EC2 INSTANCES ]
+======================================================================
+  Instance #1
+    Instance ID       : i-05aaf1765971be1b3
+    Instance Name     : nexacloud-web-server
+    Instance Type     : t3.micro
+    Instance State    : running
+    Public IPv4       : 54.196.220.168
+    Private IPv4      : 172.31.25.157
+    Availability Zone : us-east-1b
+
+  Instance #2
+    Instance ID       : i-0afda0693088157aa
+    Instance Name     : Vishwas-2547255-CIA1-WebServer
+    Instance Type     : t3.micro
+    Instance State    : running
+    Public IPv4       : 100.54.125.60
+    Private IPv4      : 172.31.1.139
+    Availability Zone : us-east-1d
+
+Total running instances : 2
+
+======================================================================
+               END OF REPORT
+======================================================================
