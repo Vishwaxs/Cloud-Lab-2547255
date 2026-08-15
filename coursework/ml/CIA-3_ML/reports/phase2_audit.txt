@@ -1,0 +1,101 @@
+districts in DRIMS               : 33
+districts in CWC rainfall        : 23
+modellable (both)                : 22
+
+climatology baseline: 12,943 district-days from 2021-2024, 23 districts
+--- usability filtering ---
+districts dropped (rainfall coverage < 20%): ['Dhemaji']
+    Dhemaji: coverage=0.0%, positives lost=89
+rows 6,116 -> 5,773   positives 623 -> 534
+
+======================================================================
+PHASE 2 DATASET AUDIT
+======================================================================
+total rows                       : 5,773
+positive rows (flood_affected=1) : 534
+negative rows                    : 5,239
+positive percentage              : 9.25%
+negatives : positives            : 9.8 : 1
+
+districts represented            : 21
+dates represented                : 277
+date range                       : 2025-05-02 -> 2026-08-13
+
+train_2025   rows= 3,611  dates= 174  pos=  294  pos%=8.14%
+test_2026    rows= 2,162  dates= 103  pos=  240  pos%=11.10%
+
+--- missing report dates within season windows ---
+  2025: 184 calendar days, 175 with a report, 9 missing
+        missing: [datetime.date(2025, 5, 3), datetime.date(2025, 5, 4), datetime.date(2025, 5, 24), datetime.date(2025, 6, 7), datetime.date(2025, 6, 16), datetime.date(2025, 8, 2), datetime.date(2025, 9, 20), datetime.date(2025, 9, 21), datetime.date(2025, 9, 30)]
+  2026: 105 calendar days, 103 with a report, 2 missing
+        missing: [datetime.date(2026, 5, 22), datetime.date(2026, 5, 30)]
+
+duplicate district-days          : 0
+
+--- rainfall coverage ---
+rows with NO rainfall observation: 2,074  (35.9%)
+rows with rainfall               : 3,699
+mean stations per district-day   : 5.47
+               rows  with_rain  pos  rain_pct  pos_pct
+district                                              
+Karbi Anglong   277        122   23      44.0     8.30
+Nagaon          277        125   49      45.1    17.69
+Jorhat          270        128   64      47.4    23.70
+Chirang         273        135    4      49.5     1.47
+Bongaigaon      273        156    2      57.1     0.73
+Kokrajhar       271        156    8      57.6     2.95
+Goalpara        273        161   10      59.0     3.66
+Morigaon        272        166    8      61.0     2.94
+Sivasagar       277        170   67      61.4    24.19
+Baksa           277        178    1      64.3     0.36
+Lakhimpur       277        180   66      65.0    23.83
+Nalbari         277        184    6      66.4     2.17
+Barpeta         273        184    2      67.4     0.73
+Kamrup          277        188   19      67.9     6.86
+Sonitpur        273        187   29      68.5    10.62
+Golaghat        275        194   66      70.5    24.00
+Dibrugarh       277        197   51      71.1    18.41
+Tinsukia        277        198   13      71.5     4.69
+Hailakandi      277        226   13      81.6     4.69
+Cachar          274        230   23      83.9     8.39
+Sribhumi        276        234   10      84.8     3.62
+
+--- feature-level missingness (left as NaN for in-pipeline imputation) ---
+  rain_prev3d_sum       766  (13.3%)
+  rain_prev7d_sum       188  (3.3%)
+  rain_prev15d_sum        0  (0.0%)
+  rain_prev7d_max       188  (3.3%)
+  rain_anom_7d          188  (3.3%)
+  rain_anom_15d           0  (0.0%)
+  rain_state_prev3d     210  (3.6%)
+  wet_days_prev7d         0  (0.0%)
+  rain_obs_prev7d         0  (0.0%)
+  month                   0  (0.0%)
+  day_of_year             0  (0.0%)
+  district                0  (0.0%)
+
+--- leakage checks ---
+MODEL FEATURES = ['rain_prev3d_sum', 'rain_prev7d_sum', 'rain_prev15d_sum', 'rain_prev7d_max', 'rain_anom_7d', 'rain_anom_15d', 'rain_state_prev3d', 'wet_days_prev7d', 'rain_obs_prev7d', 'month', 'day_of_year', 'district']
+1. same-day rainfall is NOT a feature (rain_mean_mm/max/sum kept in the file for EDA only, excluded from FEATURES)
+2. all rolling features use .shift(1) before rolling -> a row never sees its own day
+3. no DRIMS outcome fields (population, camps, damage) were read into the table; columns present: ['district', 'date', 'flood_affected', 'rain_mean_mm', 'rain_max_mm', 'rain_sum_mm', 'n_stations', 'rain_prev3d_sum', 'rain_prev7d_sum', 'rain_prev15d_sum', 'rain_prev1d', 'rain_prev7d_max', 'year', 'month', 'day_of_year', 'rain_obs_prev7d', 'wet_days_prev7d', 'clim_daily_mm', 'rain_anom_7d', 'rain_anom_15d', 'rain_state_prev3d', 'split']
+4. split is chronological, not random: train <= 2025-12-31 (2025-10-31), test >= 2026-05-01
+5. train/test date overlap       : 0 (must be 0)
+
+--- verified POSITIVE examples ---
+ district       date  flood_affected  rain_mean_mm  rain_prev3d_sum  rain_prev7d_sum  n_stations
+ Sonitpur 2026-08-08               1     28.866667       113.975000       161.445000         6.0
+Lakhimpur 2026-08-03               1     14.650000        30.854394       128.081894         8.0
+  Nalbari 2026-06-30               1      8.200000        94.483333       124.050000         1.0
+  Nalbari 2026-07-01               1      8.233333        84.533333       117.216667         3.0
+Sivasagar 2025-07-07               1     12.400000        20.306667       117.056667         2.0
+  Nalbari 2026-06-29               1     25.733333        68.750000       114.983333         3.0
+
+--- verified NEGATIVE examples ---
+district       date  flood_affected  rain_mean_mm  rain_prev3d_sum  rain_prev7d_sum  n_stations
+   Baksa 2025-05-02               0           NaN         2.600000         2.600000         NaN
+   Baksa 2025-05-05               0      9.266667         2.600000         2.600000         6.0
+   Baksa 2025-05-06               0     19.000000        11.866667        11.866667         1.0
+   Baksa 2025-05-07               0      3.600000        28.266667        30.866667         1.0
+   Baksa 2025-05-08               0      2.133333        31.866667        34.466667         3.0
+   Baksa 2025-05-09               0     28.100000        24.733333        36.600000         2.0

@@ -1,0 +1,279 @@
+date,file_date,report_type,declared_count,n_from_district_list,n_from_revenue_circle,n_union,sections_agree,rivers_above_danger_level
+2025-05-01,2025-05-01,Assam Flood Report,,0,0,0,True,Nil
+2025-05-02,2025-05-02,Assam Flood Report,,0,0,0,True,Nil
+2025-05-05,2025-05-05,Assam Flood Report,,0,0,0,True,Nil
+2025-05-06,2025-05-06,Assam Flood Report,,0,0,0,True,Nil
+2025-05-07,2025-05-07,Assam Flood Report,,0,0,0,True,Nil
+2025-05-08,2025-05-08,Assam Flood Report,,0,0,0,True,Nil
+2025-05-09,2025-05-09,Assam Flood Report,,0,0,0,True,Nil
+2025-05-10,2025-05-10,Assam Flood Report,,0,0,0,True,Nil
+2025-05-11,2025-05-11,Assam Flood Report,,0,0,0,True,Nil
+2025-05-12,2025-05-12,Assam Flood Report,,0,0,0,True,Nil
+2025-05-13,2025-05-13,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-05-14,2025-05-14,Assam Flood Report,,0,0,0,True,Nil
+2025-05-15,2025-05-15,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-05-16,2025-05-16,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-05-17,2025-05-17,Assam Flood Report,,0,0,0,True,Nil
+2025-05-18,2025-05-18,Assam Flood Report,,0,0,0,True,Nil
+2025-05-19,2025-05-19,Assam Flood Report,,0,0,0,True,Nil
+2025-05-20,2025-05-20,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-05-21,2025-05-21,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-05-22,2025-05-22,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-05-23,2025-05-23,Assam Flood Report,,0,0,0,True,Nil
+2025-05-25,2025-05-25,Assam Flood Report,,0,0,0,True,Nil
+2025-05-26,2025-05-26,Assam Flood Report,,0,0,0,True,Nil
+2025-05-27,2025-05-27,Assam Flood Report,,0,0,0,True,Nil
+2025-05-28,2025-05-28,Assam Flood Report,,0,0,0,True,Nil
+2025-05-29,2025-05-29,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-05-30,2025-05-30,Assam Flood Report,1.0,2,2,2,True,Nil
+2025-05-31,2025-05-31,Assam Flood Report,12.0,12,12,12,True,Nil
+2025-06-01,2025-06-01,Assam Flood Report,19.0,19,19,19,True,"Brahmaputra (Dibrugarh), Brahmaputra (Neamatighat), Dhansiri (S) (Numaligarh), Kopili (Kampur)"
+2025-06-02,2025-06-02,Assam Flood Report,22.0,22,22,22,True,"Brahmaputra (Neamatighat), Brahmaputra (Tezpur), Subansiri (Badatighat), Burhidihing (Chenimari(Khowang)), Dhansiri (S) (Numaligarh), Kopili (Kampur), Kopili (Dharamtul)"
+2025-06-03,2025-06-03,Assam Flood Report,21.0,21,21,21,True,"Brahmaputra (Neamatighat), Brahmaputra (Tezpur), Burhidihing (Chenimari(Khowang)), Kopili (Kampur), Kopili (Dharamtul)"
+2025-06-04,2025-06-04,Assam Flood Report,21.0,21,21,21,True,"Brahmaputra (Neamatighat), Brahmaputra (Tezpur), Brahmaputra (Dhubri), Burhidihing (Chenimari(Khowang)), Kopili (Kampur), Kopili (Dharamtul)"
+2025-06-05,2025-06-05,Assam Flood Report,19.0,19,19,19,True,"Brahmaputra (Dhubri), Burhidihing (Chenimari(Khowang)), Kopili (Kampur), Kopili (Dharamtul)"
+2025-06-06,2025-06-06,Assam Flood Report,18.0,18,18,18,True,"Brahmaputra (Dhubri), Kopili (Dharamtul), Katakhal (MATIZURI (FFS)), Barak (B.P. GHAT (FFS, CS, BS& IB)), Kushiyara (SRIBHUMI (FFS))"
+2025-06-08,2025-06-08,Assam Flood Report,11.0,11,11,11,True,Nil
+2025-06-09,2025-06-09,Assam Flood Report,9.0,9,9,9,True,Nil
+2025-06-10,2025-06-10,Assam Flood Report,9.0,9,9,9,True,Nil
+2025-06-11,2025-06-11,Assam Flood Report,7.0,7,7,7,True,Nil
+2025-06-12,2025-06-12,Assam Flood Report,4.0,4,4,4,True,Nil
+2025-06-13,2025-06-13,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-06-14,2025-06-14,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-06-15,2025-06-15,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-06-17,2025-06-17,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-06-18,2025-06-18,Assam Flood Report,4.0,4,4,4,True,Nil
+2025-06-19,2025-06-19,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-06-20,2025-06-20,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-06-21,2025-06-21,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-06-22,2025-06-22,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-06-23,2025-06-23,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-06-24,2025-06-24,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-06-25,2025-06-25,Assam Flood Report,4.0,4,4,4,True,Nil
+2025-06-26,2025-06-26,Assam Flood Report,3.0,3,3,3,True,Brahmaputra (Neamatighat)
+2025-06-27,2025-06-27,Assam Flood Report,2.0,2,2,2,True,Disang (Nanglamuraghat)
+2025-06-28,2025-06-28,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-06-29,2025-06-29,Assam Flood Report,,0,0,0,True,Nil
+2025-06-30,2025-06-30,Assam Flood Report,,0,0,0,True,Nil
+2025-07-01,2025-07-01,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-07-02,2025-07-02,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-07-03,2025-07-03,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-07-04,2025-07-04,Assam Flood Report,5.0,5,5,5,True,Dhansiri (S) (Numaligarh)
+2025-07-05,2025-07-05,Assam Flood Report,6.0,6,6,6,True,"Dikhou (Sivasagar), Dhansiri (S) (Numaligarh)"
+2025-07-06,2025-07-06,Assam Flood Report,4.0,4,4,4,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh)"
+2025-07-07,2025-07-07,Assam Flood Report,5.0,5,5,5,True,"Dikhou (Sivasagar), Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh)"
+2025-07-08,2025-07-08,Assam Flood Report,6.0,6,6,6,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh)"
+2025-07-09,2025-07-09,Assam Flood Report,5.0,5,5,5,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh)"
+2025-07-10,2025-07-10,Assam Flood Report,5.0,5,5,5,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh)"
+2025-07-11,2025-07-11,Assam Flood Report,4.0,4,4,4,True,Dhansiri (S) (Numaligarh)
+2025-07-12,2025-07-12,Assam Flood Report,3.0,3,3,3,True,Dhansiri (S) (Numaligarh)
+2025-07-13,2025-07-13,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-07-14,2025-07-14,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-07-15,2025-07-15,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-07-16,2025-07-16,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-07-17,2025-07-17,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-07-18,2025-07-18,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-07-19,2025-07-19,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-07-20,2025-07-20,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-07-21,2025-07-21,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-07-22,2025-07-22,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-07-23,2025-07-23,Assam Flood Report,,0,0,0,True,Nil
+2025-07-24,2025-07-24,Assam Flood Report,,0,0,0,True,Nil
+2025-07-25,2025-07-25,Assam Flood Report,,0,0,0,True,Nil
+2025-07-26,2025-07-26,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-07-27,2025-07-27,Assam Flood Report,,0,0,0,True,Nil
+2025-07-28,2025-07-28,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-07-29,2025-07-29,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-07-30,2025-07-30,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-07-31,2025-07-31,Assam Flood Report,,0,0,0,True,Nil
+2025-08-01,2025-08-01,Assam Flood Report,,0,0,0,True,Nil
+2025-08-03,2025-08-03,Assam Flood Report,,0,0,0,True,Nil
+2025-08-04,2025-08-04,Assam Flood Report,,0,0,0,True,Nil
+2025-08-05,2025-08-05,Assam Flood Report,,0,0,0,True,Nil
+2025-08-06,2025-08-06,Assam Flood Report,,0,0,0,True,Katakhal (MATIZURI (FFS))
+2025-08-07,2025-08-07,Assam Flood Report,2.0,2,2,2,True,Katakhal (MATIZURI (FFS))
+2025-08-08,2025-08-08,Assam Flood Report,4.0,4,4,4,True,Disang (Nanglamuraghat)
+2025-08-09,2025-08-09,Assam Flood Report,4.0,4,4,4,True,"Dikhou (Sivasagar), Disang (Nanglamuraghat)"
+2025-08-10,2025-08-10,Assam Flood Report,4.0,4,4,4,True,Disang (Nanglamuraghat)
+2025-08-11,2025-08-11,Assam Flood Report,5.0,5,5,5,True,Nil
+2025-08-12,2025-08-12,Assam Flood Report,4.0,4,4,4,True,Jia-Bharali (Nt Road Crossing)
+2025-08-13,2025-08-13,Assam Flood Report,8.0,8,8,8,True,Jia-Bharali (Nt Road Crossing)
+2025-08-14,2025-08-14,Assam Flood Report,8.0,8,8,8,True,Dikhou (Sivasagar)
+2025-08-15,2025-08-15,Assam Flood Report,5.0,5,5,5,True,Dikhou (Sivasagar)
+2025-08-16,2025-08-16,Assam Flood Report,4.0,4,4,4,True,Nil
+2025-08-17,2025-08-17,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-08-18,2025-08-18,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-08-19,2025-08-19,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-08-20,2025-08-20,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-08-21,2025-08-21,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-08-22,2025-08-22,Assam Flood Report,,0,0,0,True,Nil
+2025-08-23,2025-08-23,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-08-24,2025-08-24,Assam Flood Report,,0,0,0,True,Nil
+2025-08-25,2025-08-25,Assam Flood Report,,0,0,0,True,Nil
+2025-08-26,2025-08-26,Assam Flood Report,,0,0,0,True,Nil
+2025-08-27,2025-08-27,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-08-28,2025-08-28,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-08-29,2025-08-29,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-08-30,2025-08-30,Assam Flood Report,4.0,4,4,4,True,Jia-Bharali (Nt Road Crossing)
+2025-08-31,2025-08-31,Assam Flood Report,4.0,4,4,4,True,Nil
+2025-09-01,2025-09-01,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-09-02,2025-09-02,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-09-03,2025-09-03,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-09-04,2025-09-04,Assam Flood Report,,0,0,0,True,Nil
+2025-09-05,2025-09-05,Assam Flood Report,,0,0,0,True,Nil
+2025-09-06,2025-09-06,Assam Flood Report,,0,0,0,True,Nil
+2025-09-07,2025-09-07,Assam Flood Report,,0,0,0,True,Nil
+2025-09-08,2025-09-08,Assam Flood Report,,0,0,0,True,Nil
+2025-09-09,2025-09-09,Assam Flood Report,,0,0,0,True,Nil
+2025-09-10,2025-09-10,Assam Flood Report,,0,0,0,True,Dhansiri (S) (Numaligarh)
+2025-09-11,2025-09-11,Assam Flood Report,,0,0,0,True,Dhansiri (S) (Numaligarh)
+2025-09-12,2025-09-12,Assam Flood Report,1.0,1,1,1,True,Dhansiri (S) (Numaligarh)
+2025-09-13,2025-09-13,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-09-14,2025-09-14,Assam Flood Report,3.0,3,3,3,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh)"
+2025-09-15,2025-09-15,Assam Flood Report,5.0,5,5,5,True,"Dikhou (Sivasagar), Disang (Nanglamuraghat), Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2025-09-16,2025-09-16,Assam Flood Report,6.0,6,6,6,True,"Dikhou (Sivasagar), Disang (Nanglamuraghat), Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh), Barak (B.P. GHAT (FFS, CS, BS& IB)), Barak (A.P. GHAT (FFS, BS& IB)), Kushiyara (SRIBHUMI (FFS))"
+2025-09-17,2025-09-17,Assam Flood Report,6.0,6,6,6,True,"Dikhou (Sivasagar), Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh), Barak (A.P. GHAT (FFS, BS& IB)), Barak (B.P. GHAT (FFS, CS, BS& IB)), Kushiyara (SRIBHUMI (FFS))"
+2025-09-18,2025-09-18,Assam Flood Report,5.0,5,5,5,True,"Dikhou (Sivasagar), Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh), Barak (A.P. GHAT (FFS, BS& IB)), Kushiyara (SRIBHUMI (FFS))"
+2025-09-19,2025-09-19,Assam Flood Report,5.0,5,5,5,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2025-09-22,2025-09-22,Assam Flood Report,2.0,2,2,2,True,Dhansiri (S) (Numaligarh)
+2025-09-23,2025-09-23,Assam Flood Report,1.0,1,1,1,True,Dhansiri (S) (Numaligarh)
+2025-09-24,2025-09-24,Assam Flood Report,1.0,1,1,1,True,Dhansiri (S) (Numaligarh)
+2025-09-25,2025-09-25,Assam Flood Report,1.0,1,1,1,True,Dhansiri (S) (Numaligarh)
+2025-09-26,2025-09-26,Assam Flood Report,,0,0,0,True,Dhansiri (S) (Numaligarh)
+2025-09-27,2025-09-27,Assam Flood Report,,0,0,0,True,Nil
+2025-09-28,2025-09-21,Assam Flood Report,,0,0,0,True,Nil
+2025-09-29,2025-09-29,Assam Flood Report,,0,0,0,True,Nil
+2025-10-01,2025-10-01,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-10-02,2025-10-02,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-10-03,2025-10-03,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-10-04,2025-10-04,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-10-05,2025-10-05,Assam Flood Report,2.0,2,2,2,True,Nil
+2025-10-06,2025-10-06,Assam Flood Report,,0,3,3,False,"Beki (Road Bridge), Sankosh (Golokganj)"
+2025-10-07,2025-10-07,Assam Flood Report,3.0,3,3,3,True,Nil
+2025-10-08,2025-10-08,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-10-09,2025-10-09,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-10-10,2025-10-10,Assam Flood Report,,0,0,0,True,Nil
+2025-10-11,2025-10-11,Assam Flood Report,,0,0,0,True,Nil
+2025-10-12,2025-10-12,Assam Flood Report,,0,0,0,True,Nil
+2025-10-13,2025-10-13,Assam Flood Report,1.0,1,1,1,True,Nil
+2025-10-14,2025-10-14,Assam Flood Report,,0,0,0,True,Nil
+2025-10-15,2025-10-15,Assam Flood Report,,0,0,0,True,Nil
+2025-10-16,2025-10-16,Assam Flood Report,,0,0,0,True,Nil
+2025-10-17,2025-10-17,Assam Flood Report,,0,0,0,True,Nil
+2025-10-18,2025-10-18,Assam Flood Report,,0,0,0,True,Nil
+2025-10-19,2025-10-19,Assam Flood Report,,0,0,0,True,Nil
+2025-10-20,2025-10-20,Assam Flood Report,,0,0,0,True,Nil
+2025-10-21,2025-10-21,Assam Flood Report,,0,0,0,True,Nil
+2025-10-22,2025-10-22,Assam Flood Report,,0,0,0,True,Nil
+2025-10-23,2025-10-23,Assam Flood Report,,0,0,0,True,Nil
+2025-10-24,2025-10-24,Assam Flood Report,,0,0,0,True,Nil
+2025-10-25,2025-10-25,Assam Flood Report,,0,0,0,True,Nil
+2025-10-26,2025-10-26,Assam Flood Report,,0,0,0,True,Nil
+2025-10-27,2025-10-27,Assam Flood Report,,0,0,0,True,Nil
+2025-10-28,2025-10-28,Assam Flood Report,,0,0,0,True,Nil
+2025-10-29,2025-10-29,Assam Flood Report,,0,0,0,True,Nil
+2025-10-30,2025-10-30,Assam Flood Report,,0,0,0,True,Nil
+2025-10-31,2025-10-31,Assam Flood Report,,0,0,0,True,Nil
+2026-05-01,2026-05-01,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-02,2026-05-02,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-03,2026-05-03,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-04,2026-05-04,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-05,2026-05-05,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-06,2026-05-06,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-07,2026-05-07,Assam Flood Report,,0,0,0,True,Nil
+2026-05-08,2026-05-08,Assam Flood Report,,0,0,0,True,Nil
+2026-05-09,2026-05-09,Assam Flood Report,,0,0,0,True,Nil
+2026-05-10,2026-05-10,Assam Flood Report,,0,0,0,True,Nil
+2026-05-11,2026-05-11,Assam Flood Report,,0,0,0,True,Nil
+2026-05-12,2026-05-12,Assam Flood Report,,0,0,0,True,Nil
+2026-05-13,2026-05-13,Assam Flood Report,,0,0,0,True,Nil
+2026-05-14,2026-05-14,Assam Flood Report,,0,0,0,True,Nil
+2026-05-15,2026-05-15,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-16,2026-05-16,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-17,2026-05-17,Assam Flood Report,,0,0,0,True,Nil
+2026-05-18,2026-05-18,Assam Flood Report,,0,0,0,True,Nil
+2026-05-19,2026-05-19,Assam Flood Report,,0,0,0,True,Nil
+2026-05-20,2026-05-20,Assam Flood Report,,0,0,0,True,Nil
+2026-05-21,2026-05-21,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-23,2026-05-23,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-24,2026-05-24,Assam Flood Report,,0,0,0,True,Nil
+2026-05-25,2026-05-25,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-05-26,2026-05-26,Assam Flood Report,,0,0,0,True,Nil
+2026-05-27,2026-05-27,Assam Flood Report,,0,0,0,True,Nil
+2026-05-28,2026-05-28,Assam Flood Report,,0,0,0,True,Nil
+2026-05-29,2026-05-29,Assam Flood Report,,0,0,0,True,Nil
+2026-05-31,2026-05-31,Assam Flood Report,,0,0,0,True,Nil
+2026-06-01,2026-06-01,Assam Flood Report,,0,0,0,True,Nil
+2026-06-02,2026-06-02,Assam Flood Report,,0,0,0,True,Nil
+2026-06-03,2026-06-03,Assam Flood Report,,0,0,0,True,Nil
+2026-06-04,2026-06-04,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-06-05,2026-06-05,Assam Flood Report,2.0,2,2,2,True,Nil
+2026-06-06,2026-06-06,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-06-07,2026-06-07,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-06-08,2026-06-08,Assam Flood Report,2.0,2,2,2,True,Nil
+2026-06-09,2026-06-09,Assam Flood Report,,0,0,0,True,Nil
+2026-06-10,2026-06-10,Assam Flood Report,,0,0,0,True,Nil
+2026-06-11,2026-06-11,Assam Flood Report,4.0,4,4,4,True,Nil
+2026-06-12,2026-06-12,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-06-13,2026-06-13,Assam Flood Report,,0,0,0,True,Nil
+2026-06-14,2026-06-14,Assam Flood Report,,0,0,0,True,Nil
+2026-06-15,2026-06-15,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-06-16,2026-06-16,Assam Flood Report,,0,0,0,True,Nil
+2026-06-17,2026-06-17,Assam Flood Report,2.0,2,2,2,True,Nil
+2026-06-18,2026-06-18,Assam Flood Report,3.0,3,3,3,True,Kushiyara (SRIBHUMI (FFS))
+2026-06-19,2026-06-19,Assam Flood Report,3.0,3,3,3,True,Disang (Nanglamuraghat)
+2026-06-20,2026-06-20,Assam Flood Report,3.0,3,3,3,True,Disang (Nanglamuraghat)
+2026-06-21,2026-06-21,Assam Flood Report,4.0,4,4,4,True,Disang (Nanglamuraghat)
+2026-06-22,2026-06-22,Assam Flood Report,5.0,5,5,5,True,Disang (Nanglamuraghat)
+2026-06-23,2026-06-23,Assam Flood Report,5.0,5,5,5,True,Disang (Nanglamuraghat)
+2026-06-24,2026-06-24,Assam Flood Report,7.0,7,7,7,True,Disang (Nanglamuraghat)
+2026-06-25,2026-06-25,Assam Flood Report,5.0,5,5,5,True,Nil
+2026-06-26,2026-06-26,Assam Flood Report,4.0,4,4,4,True,Nil
+2026-06-27,2026-06-27,Assam Flood Report,3.0,3,3,3,True,Dikhou (Sivasagar)
+2026-06-28,2026-06-28,Assam Flood Report,6.0,6,6,6,True,Disang (Nanglamuraghat)
+2026-06-29,2026-06-29,Assam Flood Report,7.0,7,7,7,True,Disang (Nanglamuraghat)
+2026-06-30,2026-06-30,Assam Flood Report,6.0,6,6,6,True,"Brahmaputra (Neamatighat), Disang (Nanglamuraghat)"
+2026-07-01,2026-07-01,Assam Flood Report,4.0,4,4,4,True,Brahmaputra (Neamatighat)
+2026-07-02,2026-07-02,Assam Flood Report,2.0,2,0,2,False,Nil
+2026-07-03,2026-07-03,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-07-04,2026-07-04,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-07-05,2026-07-05,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-07-06,2026-07-06,Assam Flood Report,2.0,2,2,2,True,Nil
+2026-07-07,2026-07-07,Assam Flood Report,2.0,2,2,2,True,Nil
+2026-07-08,2026-07-08,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-07-09,2026-07-09,Assam Flood Report,1.0,1,1,1,True,Nil
+2026-07-10,2026-07-10,Assam Flood Report,1.0,1,1,1,True,Katakhal (MATIZURI (FFS))
+2026-07-11,2026-07-11,Assam Flood Report,2.0,2,2,2,True,"Burhidihing (Chenimari(Khowang)), Katakhal (MATIZURI (FFS))"
+2026-07-12,2026-07-12,Assam Flood Report,1.0,1,1,1,True,Katakhal (MATIZURI (FFS))
+2026-07-13,2026-07-13,Assam Flood Report,6.0,6,6,6,True,Katakhal (MATIZURI (FFS))
+2026-07-14,2026-07-14,Assam Flood Report,6.0,6,6,6,True,Nil
+2026-07-15,2026-07-15,Assam Flood Report,6.0,6,6,6,True,Nil
+2026-07-16,2026-07-16,Assam Flood Report,7.0,7,7,7,True,Nil
+2026-07-17,2026-07-17,Assam Flood Report,7.0,7,7,7,True,Nil
+2026-07-18,2026-07-18,Assam Flood Report,5.0,5,5,5,True,Nil
+2026-07-19,2026-07-19,Assam Flood Report,8.0,8,8,8,True,Burhidihing (Chenimari(Khowang))
+2026-07-20,2026-07-20,Assam Flood Report,16.0,16,16,16,True,"Brahmaputra (Neamatighat), Burhidihing (Chenimari(Khowang)), Disang (Nanglamuraghat), Dhansiri (S) (Numaligarh)"
+2026-07-21,2026-07-21,Assam Flood Report,16.0,16,16,16,True,"Brahmaputra (Neamatighat), Burhidihing (Chenimari(Khowang)), Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh)"
+2026-07-22,2026-07-22,Assam Flood Report,11.0,11,11,11,True,"Burhidihing (Chenimari(Khowang)), Dikhou (Sivasagar), Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2026-07-23,2026-07-23,Assam Flood Report,11.0,11,10,11,False,"Burhidihing (Chenimari(Khowang)), Disang (Nanglamuraghat), Dikhou (Sivasagar), Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2026-07-24,2026-07-24,Assam Flood Report,12.0,12,12,12,True,"Dikhou (Sivasagar), Disang (Nanglamuraghat), Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2026-07-25,2026-07-25,Assam Flood Report,10.0,10,10,10,True,"Dikhou (Sivasagar), Dhansiri (S) (Numaligarh)"
+2026-07-26,2026-07-26,Assam Flood Report,9.0,9,9,9,True,Dhansiri (S) (Numaligarh)
+2026-07-27,2026-07-27,Assam Flood Report,6.0,6,6,6,True,Dhansiri (S) (Numaligarh)
+2026-07-28,2026-07-28,Assam Flood Report,7.0,7,7,7,True,Dhansiri (S) (Numaligarh)
+2026-07-29,2026-07-29,Assam Flood Report,7.0,7,7,7,True,Nil
+2026-07-30,2026-07-30,Assam Flood Report,8.0,8,8,8,True,Dhansiri (S) (Numaligarh)
+2026-07-31,2026-07-31,Assam Flood Report,5.0,5,5,5,True,Dhansiri (S) (Numaligarh)
+2026-08-01,2026-08-01,Assam Flood Report,7.0,7,7,7,True,"Dikhou (Sivasagar), Dhansiri (S) (Numaligarh)"
+2026-08-02,2026-08-02,Assam Flood Report,5.0,5,5,5,True,Dhansiri (S) (Numaligarh)
+2026-08-03,2026-08-03,Assam Flood Report,7.0,7,7,7,True,Dhansiri (S) (Numaligarh)
+2026-08-04,2026-08-04,Assam Flood Report,10.0,10,10,10,True,Dhansiri (S) (Numaligarh)
+2026-08-05,2026-08-05,Assam Flood Report,14.0,14,14,14,True,Dhansiri (S) (Numaligarh)
+2026-08-06,2026-08-06,Assam Flood Report,15.0,15,15,15,True,Dhansiri (S) (Numaligarh)
+2026-08-07,2026-08-07,Assam Flood Report,13.0,13,13,13,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2026-08-08,2026-08-08,Assam Flood Report,12.0,12,12,12,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2026-08-09,2026-08-09,Assam Flood Report,10.0,10,10,10,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2026-08-10,2026-08-10,Assam Flood Report,10.0,10,10,10,True,"Dhansiri (S) (Golaghat), Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2026-08-11,2026-08-11,Assam Flood Report,7.0,7,7,7,True,"Dhansiri (S) (Numaligarh), Kushiyara (SRIBHUMI (FFS))"
+2026-08-12,2026-08-12,Assam Flood Report,7.0,7,7,7,True,Dhansiri (S) (Numaligarh)
+2026-08-13,2026-08-13,Assam Flood Report,7.0,7,7,7,True,Dhansiri (S) (Numaligarh)

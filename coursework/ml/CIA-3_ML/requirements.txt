@@ -1,0 +1,21 @@
+# CIA-3 — Assam flood risk classification
+# Python 3.13. Versions are the ones this work was produced and verified with.
+
+pandas==2.3.2
+numpy==2.3.3
+scikit-learn==1.7.2
+xgboost==3.4.0
+imbalanced-learn==0.14.2
+shap==0.52.0
+matplotlib==3.10.6
+seaborn==0.13.2
+joblib==1.5.2
+
+# PDF parsing of the ASDMA DRIMS daily flood reports
+pdfplumber==0.11.4
+PyMuPDF==1.24.10
+
+# to run / re-execute the notebook
+jupyter
+nbconvert
+ipykernel

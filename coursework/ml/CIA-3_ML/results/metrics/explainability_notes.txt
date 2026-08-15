@@ -1,0 +1,56 @@
+========================================================================
+Q4  MODEL EXPLAINABILITY (SHAP)
+========================================================================
+best overall model : Baseline: LogisticRegression  (PR-AUC 0.268)
+best ensemble      : Voting (soft, LR+RF+XGB) (PR-AUC 0.208)
+
+--- global feature importance: LogisticRegression (top 12) ---
+                feature  mean_abs_shap
+       num__day_of_year       2.646756
+             num__month       2.509763
+  num__rain_prev15d_sum       1.346982
+     num__rain_anom_15d       0.507404
+  cat__district_Nalbari       0.405219
+   num__rain_prev7d_sum       0.372815
+   num__rain_prev7d_max       0.339093
+cat__district_Sivasagar       0.277412
+   cat__district_Jorhat       0.253329
+    cat__district_Baksa       0.245108
+  cat__district_Chirang       0.219352
+ cat__district_Golaghat       0.211787
+
+--- global feature importance: XGBoost (top 12) ---
+                feature  mean_abs_shap
+       num__day_of_year       1.085481
+     num__rain_anom_15d       0.541587
+      num__rain_anom_7d       0.159265
+  cat__district_Nalbari       0.142273
+   cat__district_Jorhat       0.138269
+    cat__district_Baksa       0.129659
+ cat__district_Golaghat       0.125594
+  num__rain_prev15d_sum       0.124672
+   num__rain_prev7d_max       0.123624
+cat__district_Sivasagar       0.120004
+cat__district_Lakhimpur       0.105612
+ num__rain_state_prev3d       0.102618
+
+--- individual prediction explained ---
+district=Lakhimpur  date=2026-08-05  actual=1  predicted_prob=0.982  threshold=0.689
+  rain_prev3d_sum   = 26.7 mm
+  rain_prev7d_sum   = 93.4 mm
+  rain_prev15d_sum  = 184.1 mm
+  rain_anom_7d      = 1.08 x the district's seasonal norm
+  wet_days_prev7d   = 4 of the last 7 days above 10mm
+
+top contributions for this single prediction:
+                feature  shap_value
+  num__rain_prev15d_sum    4.042064
+     num__rain_anom_15d   -1.504161
+   num__rain_prev7d_sum    1.119178
+cat__district_Lakhimpur    1.044111
+             num__month    0.767478
+  cat__district_Nalbari    0.255610
+   num__rain_prev7d_max   -0.235513
+      num__rain_anom_7d    0.219370
+
+contrast - confident NO-FLOOD: district=Baksa date=2026-07-30 prob=0.003  rain_prev7d=19.9mm

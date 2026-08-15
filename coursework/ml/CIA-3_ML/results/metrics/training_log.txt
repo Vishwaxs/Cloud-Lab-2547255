@@ -1,0 +1,115 @@
+========================================================================
+Q2  DATA AUDIT
+========================================================================
+rows=5,773  cols=22  districts=21  dates=277
+duplicated district-days : 0
+dtypes                   : {dtype('float64'): 8, dtype('int64'): 2, dtype('O'): 1}
+
+-- missing values in model features --
+   rain_prev3d_sum      766  ( 13.3%)
+   rain_prev7d_sum      188  (  3.3%)
+   rain_prev15d_sum       0  (  0.0%)
+   rain_prev7d_max      188  (  3.3%)
+   rain_anom_7d         188  (  3.3%)
+   rain_anom_15d          0  (  0.0%)
+   rain_state_prev3d    210  (  3.6%)
+   wet_days_prev7d        0  (  0.0%)
+   month                  0  (  0.0%)
+   day_of_year            0  (  0.0%)
+   district               0  (  0.0%)
+
+-- invalid values --
+   negative rainfall accumulations : 0  (rainfall cannot be negative)
+   target values                   : [np.int64(0), np.int64(1)]
+
+-- outliers (IQR rule) on rainfall features; RETAINED, not clipped --
+   rain_prev3d_sum    >   50.3mm :  132 rows (2.3%)
+   rain_prev7d_sum    >  100.0mm :   99 rows (1.7%)
+   rain_prev15d_sum   >  190.3mm :   62 rows (1.1%)
+   Extreme rainfall is the physical signal we are trying to learn from -
+   removing the upper tail would delete precisely the flood-driving events.
+
+-- class balance --
+   positives 534 / 5773 = 9.25%   ratio 9.8:1
+
+========================================================================
+Q2  EDA
+========================================================================
+median 7-day antecedent rainfall : no-flood 32.7mm vs flood 42.3mm
+peak flood month                 : 6 (14.5%)
+saved results/figures/eda_overview.png
+
+========================================================================
+Q3  ENSEMBLE ARCHITECTURE, TUNING, COMPARISON
+========================================================================
+train 2025 : 3,611 rows, 294 positives (8.14%)
+test  2026 : 2,162 rows, 240 positives (11.10%)  [UNTOUCHED]
+train dates 2025-05-02 -> 2025-10-31
+test  dates 2026-05-01 -> 2026-08-13
+date overlap: 0 (must be 0)
+
+CV = TimeSeriesSplit(4) on date-sorted training rows; scale_pos_weight=11.28
+
+--- baselines (single models) ---
+Baseline: LogisticRegression ROC-AUC=0.767  PR-AUC=0.268  F1=0.350  P=0.254  R=0.562
+Baseline: DecisionTree       ROC-AUC=0.606  PR-AUC=0.149  F1=0.027  P=0.030  R=0.025
+
+--- (a) bagging: RandomForest (tuned) ---
+best params: {'clf__n_estimators': 300, 'clf__min_samples_leaf': 10, 'clf__max_features': None, 'clf__max_depth': 6}
+best CV PR-AUC: 0.129
+Bagging: RandomForest        ROC-AUC=0.684  PR-AUC=0.168  F1=0.101  P=0.113  R=0.092
+
+--- (b) boosting: XGBoost (tuned) ---
+best params: {'clf__subsample': 0.9, 'clf__reg_lambda': 1.0, 'clf__n_estimators': 200, 'clf__min_child_weight': 5, 'clf__max_depth': 4, 'clf__learning_rate': 0.05, 'clf__colsample_bytree': 0.7}
+best CV PR-AUC: 0.132
+Boosting: XGBoost            ROC-AUC=0.719  PR-AUC=0.189  F1=0.131  P=0.134  R=0.129
+Boosting: AdaBoost           ROC-AUC=0.679  PR-AUC=0.162  F1=0.101  P=0.095  R=0.108
+
+--- (c) heterogeneous ensembles ---
+Stacking (LR+RF+XGB -> LR)   ROC-AUC=0.725  PR-AUC=0.188  F1=0.153  P=0.152  R=0.154
+Voting (soft, LR+RF+XGB)     ROC-AUC=0.751  PR-AUC=0.208  F1=0.245  P=0.218  R=0.279
+
+========================================================================
+SELF-LEARNING CONCEPT 1: class-imbalance handling + threshold tuning
+========================================================================
+RandomForest + SMOTE         ROC-AUC=0.728  PR-AUC=0.195  F1=0.183  P=0.191  R=0.175
+SMOTE sits INSIDE the pipeline, so it is re-fitted per CV fold and never
+synthesises neighbours of validation rows. Applying it before the split is
+the standard leakage mistake.
+
+Every model above is reported at its OWN threshold, tuned on the training
+F1 curve only. Without this, well-ranked models that emit low absolute
+probabilities look broken at the arbitrary 0.5 cut-off (an unregularised
+RandomForest scored F1=0.03 that way while still ranking cases sensibly).
+
+========================================================================
+MODEL COMPARISON  (untouched 2026 test set)
+========================================================================
+                       model  threshold  ROC_AUC  PR_AUC    F1  Precision  Recall   TN  FP  FN  TP
+Baseline: LogisticRegression      0.689    0.767   0.268 0.350      0.254   0.562 1525 397 105 135
+    Voting (soft, LR+RF+XGB)      0.639    0.751   0.208 0.245      0.218   0.279 1682 240 173  67
+        RandomForest + SMOTE      0.641    0.728   0.195 0.183      0.191   0.175 1744 178 198  42
+           Boosting: XGBoost      0.683    0.719   0.189 0.131      0.134   0.129 1721 201 209  31
+  Stacking (LR+RF+XGB -> LR)      0.884    0.725   0.188 0.153      0.152   0.154 1716 206 203  37
+       Bagging: RandomForest      0.694    0.684   0.168 0.101      0.113   0.092 1750 172 218  22
+          Boosting: AdaBoost      0.447    0.679   0.162 0.101      0.095   0.108 1673 249 214  26
+      Baseline: DecisionTree      0.819    0.606   0.149 0.027      0.030   0.025 1727 195 234   6
+
+BASELINE (LogReg)     ROC-AUC=0.767  PR-AUC=0.268
+BEST ENSEMBLE (Voting (soft, LR+RF+XGB))  ROC-AUC=0.751  PR-AUC=0.208
+VERDICT: The best ensemble DOES NOT outperform the baseline on PR-AUC.
+
+saved results/figures/model_comparison.png
+
+--- classification report: best ensemble @ tuned threshold ---
+              precision    recall  f1-score   support
+
+    no flood       0.91      0.88      0.89      1922
+       flood       0.22      0.28      0.24       240
+
+    accuracy                           0.81      2162
+   macro avg       0.56      0.58      0.57      2162
+weighted avg       0.83      0.81      0.82      2162
+
+
+BEST OVERALL MODEL: Baseline: LogisticRegression (PR-AUC 0.268, threshold 0.689)

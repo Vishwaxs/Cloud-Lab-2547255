@@ -1,0 +1,18 @@
+# Raw source data — ~507 MB. NOT committed.
+# Fully reproducible with the acquisition scripts in src/:
+#   src/download_raw_data.ps1            (NWDP CSVs + SHA256 manifest)
+#   src/download_drims_flood_reports.ps1 (285 DRIMS PDFs)
+#   src/parse_danger_levels.ps1          (Assam WRD danger levels)
+data/raw/
+
+# The faculty-supplied reference video (not our asset)
+*.mp4
+
+# Our own submission video lives outside the repo / on Drive
+video/*.mov
+video/*.mp4
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/

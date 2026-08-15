@@ -1,0 +1,37 @@
+{
+  "best_model": "Baseline: LogisticRegression",
+  "best_threshold": 0.689,
+  "best_model_roc_auc": 0.7672693374956643,
+  "best_model_pr_auc": 0.2683669935083451,
+  "best_ensemble": "Voting (soft, LR+RF+XGB)",
+  "best_ensemble_threshold": 0.639,
+  "features_numeric": [
+    "rain_prev3d_sum",
+    "rain_prev7d_sum",
+    "rain_prev15d_sum",
+    "rain_prev7d_max",
+    "rain_anom_7d",
+    "rain_anom_15d",
+    "rain_state_prev3d",
+    "wet_days_prev7d",
+    "month",
+    "day_of_year"
+  ],
+  "features_categorical": [
+    "district"
+  ],
+  "train_period": [
+    "2025-05-02",
+    "2025-10-31"
+  ],
+  "test_period": [
+    "2026-05-01",
+    "2026-08-13"
+  ],
+  "baseline_roc_auc": 0.7672693374956643,
+  "baseline_pr_auc": 0.2683669935083451,
+  "best_ensemble_roc_auc": 0.7513939472771419,
+  "best_ensemble_pr_auc": 0.20830095055710313,
+  "verdict": "The best ensemble DOES NOT outperform the baseline on PR-AUC.",
+  "random_state": 42
+}

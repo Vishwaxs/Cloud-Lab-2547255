@@ -1,0 +1,109 @@
+date,issue,detail
+2025-05-01,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-02,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-05,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-06,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-07,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-08,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-09,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-10,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-11,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-12,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-14,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-17,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-18,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-19,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-23,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-24,date_mismatch,portal served 2025-05-22 - re-keyed to that date
+2025-05-25,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-26,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-27,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-28,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-05-30,count_mismatch,"declared=1 parsed_list=2 ({'cachar': 'Cachar', 'kamrupm': 'Kamrup M'})"
+2025-06-07,wrong_report_type,report_type='Assam Urban Flood Report' - EXCLUDED
+2025-06-16,wrong_report_type,report_type='Assam Storm Report' - EXCLUDED
+2025-06-29,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-06-30,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-07-23,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-07-24,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-07-25,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-07-27,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-07-31,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-08-01,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-08-02,wrong_report_type,report_type='Assam Urban Flood Report' - EXCLUDED
+2025-08-03,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-08-04,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-08-05,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-08-06,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-08-22,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-08-24,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-08-25,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-08-26,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-04,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-05,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-06,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-07,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-08,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-09,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-10,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-11,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-20,wrong_report_type,report_type='Assam Urban Flood Report' - EXCLUDED
+2025-09-21,date_mismatch,portal served 2025-09-28 - re-keyed to that date
+2025-09-28,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-26,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-27,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-29,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-09-30,wrong_report_type,report_type='Assam Urban Flood Report' - EXCLUDED
+2025-10-06,section_disagreement,"only_in_district_list=[] only_in_revenue_circle=['dhemaji', 'jorhat', 'kokrajhar']"
+2025-10-10,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-11,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-12,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-14,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-15,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-16,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-17,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-18,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-19,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-20,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-21,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-22,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-23,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-24,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-25,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-26,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-27,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-28,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-29,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-30,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2025-10-31,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-07,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-08,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-09,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-10,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-11,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-12,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-13,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-14,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-17,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-18,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-19,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-20,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-22,wrong_report_type,report_type='Assam Urban Flood Report' - EXCLUDED
+2026-05-24,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-26,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-27,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-28,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-29,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-05-31,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-06-01,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-06-02,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-06-03,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-06-09,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-06-10,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-06-13,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-06-14,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-06-16,zero_districts_affected,verified pattern: declared count 0 / Nil rows
+2026-07-02,section_disagreement,"only_in_district_list=['dhemaji', 'dibrugarh'] only_in_revenue_circle=[]"
+2026-07-23,section_disagreement,only_in_district_list=['hojai'] only_in_revenue_circle=[]
+2025-05-22,duplicate_internal_date,"from file_date=2025-05-22, n_union=1"
+2025-05-22,duplicate_internal_date,"from file_date=2025-05-24, n_union=1"
