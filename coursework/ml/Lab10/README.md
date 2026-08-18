@@ -14,12 +14,12 @@ This repository contains the complete implementation, experimental evaluation, d
 ---
 
 ## Key Highlights & Implementations
-1. **Mathematical Proof of Linear Inseparability:** Analytical derivation showing why single-layer perceptrons fail on the XOR truth table.
+1. **Mathematical Proof & Empirical Demonstration of Linear Inseparability:** Analytical derivation showing why single-layer perceptrons fail on XOR (theoretical maximum 75.0%; empirical demonstration 50.0% when predicting 1 for $p=0.5000$).
 2. **Keras High-Level API:** $2 \to 4 \to 1$ MLP using `tf.keras.Sequential`, `Dense`, $\tanh$ hidden activation, $\text{sigmoid}$ output, and Adam optimization (100.0% accuracy, Loss: $0.000817$).
 3. **TensorFlow Low-Level API:** Full manual implementation using explicit `tf.Variable` weight matrices, manual forward pass, explicit Binary Cross-Entropy loss, and `tf.GradientTape` automatic differentiation (100.0% accuracy, Loss: $0.000923$).
 4. **PyTorch Implementation (Third Library):** Object-oriented `torch.nn.Module` with autograd backpropagation and Adam optimizer (100.0% accuracy, Loss: $0.001702$).
 5. **Self-Learning Concept 1:** 4-panel 2D decision boundary contour visualization across architectures.
-6. **Self-Learning Concept 2:** Systematic hyperparameter ablation across hidden neuron count ($1, 2, 4, 8$), activations ($\text{Linear}, \text{Sigmoid}, \text{ReLU}, \text{Tanh}$), and learning rates ($0.001 \to 2.0$).
+6. **Self-Learning Concept 2:** Systematic hyperparameter ablation across hidden neuron count ($1, 2, 4, 8$), activations ($\text{Linear}, \text{Sigmoid}, \text{ReLU}, \text{Tanh}$ — where Tanh showed the most favorable convergence behavior among the tested activations), and learning rates ($0.001 \to 2.0$ — where $0.08$ provided rapid and stable convergence; $0.5$ achieved the lowest final loss in this experiment, whereas $2.0$ was unstable).
 7. **Comprehensive Viva Voce Guide:** Detailed answers to 25 foundational neural network questions.
 
 ---

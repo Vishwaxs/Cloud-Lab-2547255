@@ -57,6 +57,11 @@ $$(w_2 + b) + (w_1 + b) \ge 0 \implies w_1 + w_2 + 2b \ge 0$$
 Since $b < 0$ from (1):
 $$w_1 + w_2 + b > w_1 + w_2 + 2b \ge 0 \implies w_1 + w_2 + b > 0$$
 This contradicts inequality (4) which states $w_1 + w_2 + b < 0$.  
+
+### Theoretical vs Empirical Accuracy on XOR for Single-Layer Perceptron
+- **Theoretical Maximum:** **75.0%** (an optimal linear hyperplane can at best correctly classify 3 out of 4 XOR points, as no straight line can isolate diagonal opposites).
+- **Empirical Numerical Demonstration:** **50.0%** (under symmetric Binary Cross-Entropy optimization, the linear model converges to $p = 0.5000$ for all four inputs. Applying the standard $\ge 0.5$ decision threshold assigns all samples to Class 1, getting the two positive cases right and the two negative cases wrong).
+
 **Conclusion:** No linear hyperplane can separate the XOR points. A non-linear hidden layer is mandatory.
 
 ---
@@ -141,7 +146,7 @@ class PyTorchXORMLP(torch.nn.Module):
 ## 8. Self-Learning & Ablation Findings
 
 ### Self-Learning 1: 2D Decision Boundaries
-- The single perceptron forms a single diagonal linear plane that misclassifies at least one point (accuracy 75%).
+- The single perceptron forms a single diagonal linear plane that misclassifies at least one point (empirical accuracy 50.0% when predicting 1 for $p=0.5000$; theoretical max 75.0%).
 - The MLP forms dual symmetric non-linear boundary contours enclosing Class 1 points $(0,1)$ and $(1,0)$ while isolating Class 0 points $(0,0)$ and $(1,1)$.
 
 ### Self-Learning 2: Hyperparameter Sensitivity
@@ -154,10 +159,10 @@ class PyTorchXORMLP(torch.nn.Module):
    - Linear: Fails completely (loss $0.693$, accuracy $25\%$).
    - Sigmoid: Converges slowly due to gradient saturation.
    - ReLU: Piecewise linear boundary; can suffer from dying neurons depending on weight initialization.
-   - Tanh: Zero-centered smooth gradients; optimal and robust convergence.
+   - Tanh: Tanh showed the most favorable convergence behavior among the tested activations.
 3. **Learning Rate:**
    - $\eta = 0.001$: Slow convergence; under-trained at 400 epochs.
-   - $\eta = 0.08$: Optimal step size; rapid convergence in $< 150$ epochs.
+   - $\eta = 0.08$: 0.08 provided rapid and stable convergence; 0.5 achieved the lowest final loss in this experiment, whereas 2.0 was unstable.
    - $\eta = 2.0$: Unstable; severe gradient overshooting.
 
 ---

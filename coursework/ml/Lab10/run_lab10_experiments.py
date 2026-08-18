@@ -78,12 +78,16 @@ linear_preds = linear_model(X_np, training=False).numpy()
 linear_classes = (linear_preds >= 0.5).astype(int)
 linear_acc = np.mean(linear_classes == y_np) * 100
 
-print(f"Single-Layer Perceptron Final Accuracy on XOR: {linear_acc:.1f}%")
+print(f"Single-Layer Perceptron Empirical Accuracy: {linear_acc:.1f}% (with >= 0.5 thresholding on p=0.5000)")
 print("Single-Layer Predictions:")
 for i in range(4):
     print(f"Input: [{int(X_np[i,0])}, {int(X_np[i,1])}] | Actual: {int(y_np[i,0])} | "
           f"Probability: {linear_preds[i,0]:.4f} | Predicted: {linear_classes[i,0]} | "
           f"Correct: {'YES' if linear_classes[i,0] == int(y_np[i,0]) else 'NO (FAILED)'}")
+print("\nTHEORETICAL vs EMPIRICAL ACCURACY EXPLANATION:")
+print("- Theoretical Maximum: 75.0% (at best, any linear boundary can correctly classify 3 out of 4 XOR points).")
+print("- Numerical Demonstration: 50.0% (gradient descent on BCE reaches a symmetric loss plateau with p=0.5000,")
+print("  classifying all 4 inputs as 1 under >= 0.5 thresholding, correctly predicting only the two positive classes).")
 print("OBSERVATION: A single linear decision boundary cannot separate (0,0),(1,1) from (0,1),(1,0).")
 
 # ==============================================================================
@@ -268,7 +272,7 @@ z_torch = torch_model(torch.tensor(grid_points, dtype=torch.float32)).detach().n
 
 fig, axes = plt.subplots(1, 4, figsize=(20, 5), dpi=150)
 models_info = [
-    (axes[0], z_linear, "1. Linear Perceptron (No Hidden Layer)\nAccuracy: 75.0% (Fails to isolate XOR)", "Linear Boundary"),
+    (axes[0], z_linear, "1. Linear Perceptron (No Hidden Layer)\nEmpirical Acc: 50.0% (Theoretical Max: 75.0%)", "Linear Boundary"),
     (axes[1], z_keras, "2. Keras High-Level MLP (4 Neurons, Tanh)\nAccuracy: 100.0% (Successfully Learned)", "Keras Non-linear Boundary"),
     (axes[2], z_tf, "3. TF Low-Level MLP (GradientTape)\nAccuracy: 100.0% (Successfully Learned)", "TF Low-Level Non-linear Boundary"),
     (axes[3], z_torch, "4. PyTorch MLP (Autograd)\nAccuracy: 100.0% (Successfully Learned)", "PyTorch Non-linear Boundary")
@@ -381,7 +385,7 @@ for res in act_results:
     elif act == 'relu':
         why = "Nonlinear piecewise boundary (Fast convergence)"
     else:
-        why = "Zero-centered smooth gradients (Rapid, robust convergence)"
+        why = "Tanh showed the most favorable convergence behavior among the tested activations."
     print(f"{act:<12} | {loss_val:<14.6f} | {acc:<15.1f}% | {why}")
 print("-" * 75)
 
@@ -407,11 +411,11 @@ for res in lr_results:
     elif lr == 0.01:
         comm = "Steady but moderate convergence"
     elif lr == 0.08:
-        comm = "Optimal (rapid, stable convergence within 150 epochs)"
+        comm = "0.08 provided rapid and stable convergence"
     elif lr == 0.5:
-        comm = "Fast but exhibits minor loss oscillations"
+        comm = "0.5 achieved lowest final loss in this experiment"
     else:
-        comm = "Unstable / overshooting loss surface"
+        comm = "2.0 was unstable (overshooting loss surface)"
     print(f"{lr:<15} | {loss_val:<14.6f} | {acc:<15.1f}% | {comm}")
 print("-" * 75)
 

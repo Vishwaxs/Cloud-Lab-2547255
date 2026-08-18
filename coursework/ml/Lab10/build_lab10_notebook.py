@@ -180,12 +180,17 @@ df_linear = pd.DataFrame({
     'Correct?': ['YES' if c == int(a) else 'NO (FAILED)' for c, a in zip(linear_classes.flatten(), y_np.flatten())]
 })
 
-print("=" * 70)
+print("=" * 75)
 print("SINGLE-LAYER PERCEPTRON (LINEAR MODEL) EVALUATION")
-print("=" * 70)
+print("=" * 75)
 print(df_linear.to_string(index=False))
-print("-" * 70)
-print(f"Single-Layer Perceptron Final Accuracy: {linear_acc:.1f}% (Maximum 3/4 correct, fails on XOR)")
+print("-" * 75)
+print(f"Empirical Classification Accuracy : {linear_acc:.1f}% (with >= 0.5 thresholding on p=0.5000)")
+print("\nTheoretical vs Empirical Accuracy Analysis:")
+print("1. Theoretical Maximum Accuracy = 75.0% (any optimal linear hyperplane can at best correctly separate 3/4 XOR points).")
+print("2. Empirical Numerical Demonstration = 50.0% (gradient descent on symmetric Binary Cross-Entropy reaches")
+print("   the uninformative global minimum for linear models where p=0.5000 for all inputs. Applying the standard")
+print("   >= 0.5 decision threshold classifies all 4 samples as Class 1, getting the two positive cases [0,1] & [1,0] right (50%).)")
 print("Conclusion: A linear classifier cannot construct the diagonal decision boundaries required for XOR.")"""))
 
     # Cell 5: 2D Scatter of XOR Points
@@ -486,7 +491,7 @@ z_torch = torch_model(torch.tensor(grid_points, dtype=torch.float32)).detach().n
 
 fig, axes = plt.subplots(1, 4, figsize=(22, 5.2), dpi=150)
 models_info = [
-    (axes[0], z_linear, "1. Linear Perceptron (No Hidden Layer)\nAccuracy: 75.0% (Linear Failure)", "Linear Boundary"),
+    (axes[0], z_linear, "1. Linear Perceptron (No Hidden Layer)\nEmpirical Acc: 50.0% (Theoretical Max: 75.0%)", "Linear Boundary"),
     (axes[1], z_keras, "2. Keras High-Level MLP (4 Neurons)\nAccuracy: 100.0% (Learned Non-Linear)", "Keras Non-linear"),
     (axes[2], z_tf, "3. TF Low-Level MLP (GradientTape)\nAccuracy: 100.0% (Learned Non-Linear)", "TF Low-Level Non-linear"),
     (axes[3], z_torch, "4. PyTorch MLP (Autograd)\nAccuracy: 100.0% (Learned Non-Linear)", "PyTorch Non-linear")
@@ -579,7 +584,7 @@ df_acts = pd.DataFrame([
      'Mathematical Insight': 'Fails (Linear composition collapses to 1 line)' if r['activation'] == 'linear'
      else ('Slow convergence (vanishing gradients in small range)' if r['activation'] == 'sigmoid'
      else ('Nonlinear piecewise boundary (Fast convergence)' if r['activation'] == 'relu'
-     else 'Zero-centered smooth gradients (Rapid, robust convergence)'))}
+     else 'Tanh showed the most favorable convergence behavior among the tested activations.'))}
     for r in act_results
 ])
 
@@ -595,9 +600,9 @@ df_lrs = pd.DataFrame([
     {'Learning Rate': r['lr'], 'Final Loss': f"{r['final_loss']:.6f}", 'Final Accuracy': f"{r['final_acc']:.1f}%",
      'Behavior': 'Too slow (under-trained in 400 epochs)' if r['lr'] == 0.001
      else ('Steady moderate convergence' if r['lr'] == 0.01
-     else ('Optimal (rapid, stable convergence)' if r['lr'] == 0.08
-     else ('Fast convergence with minor oscillations' if r['lr'] == 0.5
-     else 'Unstable / gradient overshooting')))}
+     else ('0.08 provided rapid and stable convergence' if r['lr'] == 0.08
+     else ('0.5 achieved lowest final loss in this experiment' if r['lr'] == 0.5
+     else '2.0 was unstable (overshooting loss surface)')))}
     for r in lr_results
 ])
 
@@ -705,7 +710,10 @@ plt.show()"""))
 | **[0, 0]** | **0** | $0.5000$ (Fail) | $0.0014$ | $0.0001$ | $0.0000$ | **YES (Class 0)** |
 | **[0, 1]** | **1** | $0.5000$ (Pass) | $0.9999$ | $0.9983$ | $0.9982$ | **YES (Class 1)** |
 | **[1, 0]** | **1** | $0.5000$ (Pass) | $0.9986$ | $0.9996$ | $0.9982$ | **YES (Class 1)** |
-| **[1, 1]** | **0** | $0.5000$ (Fail) | $0.0004$ | $0.0016$ | $0.0031$ | **YES (Class 0)** |"""))
+| **[1, 1]** | **0** | $0.5000$ (Fail) | $0.0004$ | $0.0016$ | $0.0031$ | **YES (Class 0)** |
+
+- **Single Perceptron Accuracy Note:** Theoretical maximum for any linear model on XOR is $75.0\%$ (3/4 points). In our empirical demonstration with symmetric BCE optimization, the model converges to $p = 0.5000$ across all inputs, yielding $50.0\%$ accuracy under $\hat{y} \ge 0.5$ thresholding (getting only the two positive classes right).
+- **MLP Performance:** All three MLP implementations achieved **100.0% accuracy** on all 4 combinations."""))
 
     # Cell 17: Viva Concepts
     cells.append(new_markdown_cell(r"""## 12. Exhaustive Viva Voce Preparation
@@ -749,7 +757,7 @@ Backpropagation is an efficient algorithmic application of the calculus **chain 
 - **TensorFlow Low-Level:** Provides granular tensor operations (`tf.matmul`, `tf.Variable`, `tf.GradientTape`), giving full access and control over custom loss functions, manual gradient manipulation, dynamic weight updates, and execution flow.
 
 ### 12. Why is Tanh generally preferred over Sigmoid in hidden layers?
-$\tanh(z)$ is zero-centered with outputs in $(-1, 1)$, meaning the average activation of hidden units is close to zero. This ensures that weights in the subsequent layer receive both positive and negative gradient signals, preventing zig-zagging gradient dynamics during backpropagation.
+$\tanh(z)$ is zero-centered with outputs in $(-1, 1)$, meaning the average activation of hidden units is close to zero. This ensures that weights in the subsequent layer receive both positive and negative gradient signals, preventing zig-zagging gradient dynamics during backpropagation. In our experiments, Tanh showed the most favorable convergence behavior among the tested activations.
 
 ### 13. What happens if the hidden layer has only 1 neuron?
 With only 1 hidden neuron, the hidden representation is 1-dimensional, collapsing the input space into a single scalar value. A single scalar non-linear transformation cannot partition 4 points in a way that separates diagonal pairs, so the network fails to solve XOR (achieving maximum 75% accuracy).
@@ -763,7 +771,7 @@ For binary classification under equal misclassification costs, Bayes Decision Ru
     # Cell 18: Conclusion
     cells.append(new_markdown_cell(r"""## 13. Conclusion & Key Findings
 
-1. **Resolution of Non-Linear Separability:** We mathematically demonstrated and empirically proved that a single-layer perceptron fails to solve the XOR function (maximum 75% accuracy), whereas an MLP with a 4-neuron hidden layer achieves **100.0% accuracy** and near-zero loss ($< 0.001$).
+1. **Resolution of Non-Linear Separability:** We mathematically demonstrated and empirically proved that a single-layer perceptron fails to solve the XOR function (theoretical max 75.0%, empirical demonstration 50.0% when predicting class 1 for $p=0.5000$), whereas an MLP with a 4-neuron hidden layer achieves **100.0% accuracy** and near-zero loss ($< 0.001$).
 2. **Cross-Framework Equivalence:** The XOR MLP was successfully built, trained, and verified across three deep learning paradigms:
    - **Keras High-Level API:** 100.0% accuracy (Loss = $0.000817$)
    - **TensorFlow Low-Level API (`tf.GradientTape`):** 100.0% accuracy (Loss = $0.000923$)
@@ -771,8 +779,8 @@ For binary classification under equal misclassification costs, Bayes Decision Ru
 3. **Decision Boundary Insights:** 2D contour visualizations clearly reveal that while a linear model constructs a single separating hyperplane, the MLP generates dual curved decision boundaries that isolate the $(0,1)$ and $(1,0)$ points from $(0,0)$ and $(1,1)$.
 4. **Hyperparameter Dynamics:**
    - At least 2 hidden neurons are mathematically required to solve XOR; 4 neurons provide rapid, robust convergence.
-   - Non-linear activations ($\tanh$, ReLU, Sigmoid) are essential; linear activations collapse the network to a single perceptron.
-   - An optimal learning rate ($\eta \approx 0.08$) provides smooth, stable convergence within 150–200 epochs."""))
+   - Non-linear activations are essential; Tanh showed the most favorable convergence behavior among the tested activations.
+   - For learning rate, $\eta = 0.08$ provided rapid and stable convergence; $0.5$ achieved the lowest final loss in this experiment, whereas $2.0$ was unstable."""))
 
     nb.cells = cells
     return nb
