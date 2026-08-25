@@ -1,0 +1,23 @@
+QUESTION 5 TEST EVALUATION REPORT
+Selected Model       : MLP (1 Hidden Layer: 8 Neurons)
+Selection Rationale  : Higher Mean Cross-Validation Accuracy (95.83% vs 95.00%)
+Cross-Val Accuracy   : 95.83%
+Test Set Accuracy    : 96.67%
+
+Confusion Matrix:
+                   Pred setosa  Pred versicolor  Pred virginica
+Actual setosa               10                0               0
+Actual versicolor            0                9               1
+Actual virginica             0                0              10
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      setosa     1.0000    1.0000    1.0000        10
+  versicolor     1.0000    0.9000    0.9474        10
+   virginica     0.9091    1.0000    0.9524        10
+
+    accuracy                         0.9667        30
+   macro avg     0.9697    0.9667    0.9666        30
+weighted avg     0.9697    0.9667    0.9666        30
+

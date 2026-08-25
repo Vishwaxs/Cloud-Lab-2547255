@@ -1,0 +1,37 @@
+================================================================================
+ QUESTION 4(i) EXPERIMENTAL RESULTS & DETAILED ANALYSIS
+================================================================================
+Student Name : Vishwas Vashishtha
+Register No  : 2547255
+Dataset      : Scikit-learn Diabetes Dataset (442 samples, 10 features)
+Task         : Predict disease progression 1 year after baseline
+
+1. DIMENSIONALITY REDUCTION (PCA):
+   - Original Features: 10 (age, sex, bmi, bp, s1, s2, s3, s4, s5, s6)
+   - Selected Principal Components: 6
+   - Cumulative Explained Variance Retained: 89.61%
+   - Dimensionality Reduction Ratio: 40% reduction in feature space
+
+2. MODEL CONFIGURATIONS & HYPERPARAMETERS:
+   - Baseline SVR Best Parameters: {'svr__C': 100.0, 'svr__epsilon': 15.0, 'svr__gamma': 0.01, 'svr__kernel': 'rbf'}
+   - Reduced PCA+SVR Best Parameters: {'svr__C': 100.0, 'svr__epsilon': 20.0, 'svr__gamma': 0.01, 'svr__kernel': 'rbf'}
+
+3. TEST SET PERFORMANCE COMPARISON:
+   - Baseline SVR (10 Features) : R² = 0.4854, RMSE = 52.213, MAE = 41.583
+   - Reduced PCA+SVR (6 PCs) : R² = 0.4738, RMSE = 52.802, MAE = 42.315
+
+4. ACCURACY, COMPUTATIONAL COST & INTERPRETABILITY ANALYSIS:
+   a) Model Accuracy / Performance:
+      - Baseline SVR achieves R² = 0.4854 and RMSE = 52.213.
+      - Reduced PCA+SVR achieves R² = 0.4738 and RMSE = 52.802.
+      - PCA retains the primary linear variance directions and preserves competitive predictive power while dropping 4 dimensions.
+   b) Computational Cost:
+      - Direct Single Fit Time: Baseline = 3.32 ms vs Reduced = 3.37 ms.
+      - In SVR, kernel computation scales quadratically with samples O(n_samples^2 * n_features). Reducing feature dimension lowers matrix product calculations per kernel evaluation.
+   c) Interpretability:
+      - Baseline features (bmi, bp, s1-s6) have direct clinical and physiological meaning.
+      - PCA creates orthogonal linear combinations (principal components), which obscures direct physiological attribution although component loadings show feature contributions.
+
+5. CONCLUSION:
+   The baseline SVR utilizing all 10 clinical features yielded the optimal predictive accuracy (R² = 0.4854). Applying PCA to 6 components maintained substantial variance (89.61%) with a competitive R² of 0.4738, demonstrating that PCA effectively compresses clinical feature representations with minimal loss in performance.
+================================================================================

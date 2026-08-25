@@ -1,0 +1,3 @@
+Model Architecture,Hidden Layer Structure,Total Trainable Parameters,Mean CV Accuracy (%),CV Std Dev (%),Test Accuracy (%),Epochs to Converge,Final Loss,Fit Time (ms)
+MLP (1 Hidden Layer: 8 Neurons),"(8,)",67,95.83,2.64,96.67,291,0.0429,42.77
+"MLP (2 Hidden Layers: 8, 4 Neurons)","(8, 4)",91,95.0,1.67,96.67,209,0.0366,38.18
